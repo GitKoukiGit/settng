@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var AirplaneMode_1:Bool = true
+    @State var AirplaneMode_2:Bool = true
     @State private var frag = false
     @State private var wf = false
     @State private var bt = false
@@ -34,6 +37,7 @@ struct ContentView: View {
                             .offset(x:-10)
                         Toggle("機内モード", isOn: $frag)
                             .padding(.trailing, 18.0)
+                     /*   ToggleBtnView(AirplaneMode: $AirplaneMode_1)*/
                     }
                     NavigationLink(destination: Text("オフ")) {
                         Image(systemName: "wifi")
@@ -44,7 +48,7 @@ struct ContentView: View {
                         Toggle("Wi-Fi", isOn: $wf)
                     }
                     NavigationLink(destination: Text("オン")) {
-                        Image(systemName: "")
+                        Image(systemName: "apple.logo")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 40, height: 30)
